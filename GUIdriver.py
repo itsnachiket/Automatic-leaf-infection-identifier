@@ -14,9 +14,9 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 		self.close.clicked.connect(self.Close)
 
 	def Test(self):
-		options = QtGui.QFileDialog.Options()
-		options |= QtGui.QFileDialog.DontUseNativeDialog
-		ImageFile = QtGui.QFileDialog.getOpenFileName(self,"Select Image To Process", "","All Files (*);;Image Files(*.jpg *.gif)",options=options)	
+		options = QtWidgets.QFileDialog.Options()
+		options |= QtWidgets.QFileDialog.DontUseNativeDialog
+		ImageFile = QtWidgets.QFileDialog.getOpenFileName(self,"Select Image To Process", "","All Files (*);;Image Files(*.jpg *.gif)",options=options)	
 		exec(open('main.py').read())
 		
 
